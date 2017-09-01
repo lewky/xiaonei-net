@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+       "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="userForm" type="com.xiaonei.web.form.UserForm"></form-bean>
+	</form-beans>
+	<global-forwards>
+		<forward name="operErr" path="/WEB-INF/operErr.jsp"></forward>
+		<forward name="goIndex" path="/WEB-INF/public/index.jsp"></forward>
+	</global-forwards>
+	<action-mappings>
+		<action path="/login" parameter="flag" name="userForm">
+			<forward name="loginOK" path="/WEB-INF/self/home.jsp"></forward>
+		</action>
+		<action path="/register" parameter="flag" name="userForm">
+			<forward name="regUI" path="/WEB-INF/public/register.jsp"></forward>
+			<forward name="regOK" path="/WEB-INF/self/home.jsp"></forward>
+		</action>
+		<action path="/profile" parameter="flag" name="userForm">
+			<forward name="goHomeUI" path="/WEB-INF/self/home.jsp"></forward>
+			<forward name="goHomePageUI" path="/WEB-INF/self/homePage.jsp"></forward>
+			<forward name="uploadPhotoUI" path="/WEB-INF/self/uploadPhoto.jsp"></forward>
+		</action>
+		<action path="/album" parameter="flag">
+			<forward name="myAlbumUI" path="/WEB-INF/self/myAlbum.jsp"></forward>
+			<forward name="addAlbumUI" path="/WEB-INF/self/addOrChoiceAlbum.jsp"></forward>
+			<forward name="addPhotoUI" path="/WEB-INF/self/addPhoto.jsp"></forward>
+			<forward name="oneAlbumUI" path="/WEB-INF/self/oneAlbum.jsp"></forward>
+			<forward name="onePhotoUI" path="/WEB-INF/self/onePhoto.jsp"></forward>
+		</action>
+	</action-mappings>
+
+	<!-- 配置代理请求处理 DelegatingRequestProcessor ,作用是让ActionServlet到spring容器文件中去找action的配置 -->
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+</struts-config>

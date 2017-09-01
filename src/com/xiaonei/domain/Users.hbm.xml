@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-8-23 21:07:12 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.xiaonei.domain.Users" table="users" catalog="xiaoneinet" dynamic-insert="true">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="techschool" class="com.xiaonei.domain.Techschool" fetch="select">
+            <column name="techSch" />
+        </many-to-one>
+        <many-to-one name="junior" class="com.xiaonei.domain.Junior" fetch="select">
+            <column name="juniorSch" />
+        </many-to-one>
+        <many-to-one name="province" class="com.xiaonei.domain.Province" fetch="select">
+            <column name="homePro" />
+        </many-to-one>
+        <many-to-one name="city" class="com.xiaonei.domain.City" fetch="select">
+            <column name="homeCity" />
+        </many-to-one>
+        <many-to-one name="primaryschool" class="com.xiaonei.domain.Primaryschool" fetch="select">
+            <column name="primarySch" />
+        </many-to-one>
+        <property name="email" type="string">
+            <column name="email" length="128" not-null="true" unique="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="128" not-null="true" />
+        </property>
+        <property name="pwd" type="string">
+            <column name="pwd" length="128" not-null="true" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="128" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="16" />
+        </property>
+        <property name="birth" type="date">
+            <column name="birth" length="10" />
+        </property>
+        <property name="tel" type="string">
+            <column name="tel" length="32" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile" length="32" />
+        </property>
+        <property name="oicq" type="string">
+            <column name="oicq" length="32" />
+        </property>
+        <property name="msn" type="string">
+            <column name="msn" length="128" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="128" />
+        </property>
+        <property name="techSchYear" type="java.lang.Integer">
+            <column name="techSchYear" />
+        </property>
+        <property name="juniorYear" type="java.lang.Integer">
+            <column name="juniorYear" />
+        </property>
+        <property name="primaryYear" type="java.lang.Integer">
+            <column name="primaryYear" />
+        </property>
+        <property name="interest" type="string">
+            <column name="interest" length="256" />
+        </property>
+        <property name="music" type="string">
+            <column name="music" length="256" />
+        </property>
+        <property name="movie" type="string">
+            <column name="movie" length="256" />
+        </property>
+        <property name="game" type="string">
+            <column name="game" length="256" />
+        </property>
+        <property name="cartoon" type="string">
+            <column name="cartoon" length="256" />
+        </property>
+        <property name="sport" type="string">
+            <column name="sport" length="256" />
+        </property>
+        <property name="book" type="string">
+            <column name="book" length="256" />
+        </property>
+        <property name="assn" type="string">
+            <column name="assn" length="256" />
+        </property>
+        <property name="visited" type="java.lang.Integer">
+            <column name="visited" />
+        </property>
+        <property name="doing" type="string">
+            <column name="doing" length="128" />
+        </property>
+        <property name="online" type="java.lang.Byte">
+            <column name="online" />
+        </property>
+        <property name="registerDate" type="timestamp">
+            <column name="registerDate" length="19" />
+        </property>
+        <property name="loginDate" type="timestamp">
+            <column name="loginDate" length="19" />
+        </property>
+        <property name="level" type="java.lang.Byte">
+            <column name="level" />
+        </property>
+        <property name="locked" type="java.lang.Byte">
+            <column name="locked" />
+        </property>
+        <set name="userseniors" table="usersenior" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Usersenior" />
+        </set>
+        <set name="useruniversities" table="useruniversity" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Useruniversity" />
+        </set>
+        <set name="usernets" table="usernet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Usernet" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+.head {
+	height: 101px;
+	width: 1000px;
+	background-color: #3B5888;
+	margin: 0 auto; /*表示左右居中，上下无边距*/
+}
+
+.head .img_left {
+	width: 713px;
+	float: left;
+}
+
+.head .img_right {
+	width: 282px;
+	margin-left: 5px;
+	float: left;
+}
+
+.nav{
+	float: right;
+	list-style-type: none;
+}
+
+.nav li{
+	float: left;
+	color: #c3cddf;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+}

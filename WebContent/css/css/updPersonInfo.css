@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+/*中间大div*/
+.info_main,.album_main {
+	width: 1000px;
+	
+	/*height: 770px; 这个先暂时去掉，可以让最后的页脚自动调节*/
+	margin: 10px auto 0 auto;
+}
+
+.personal_main {
+	width: 1000px;
+/*	height: 830px;*/
+	margin: 10px auto 0 auto;
+}
+
+/*修改信息*/
+.info_left,.personal_left,.album_left {
+	width: 1000px;
+	/*height: 770px; 这个先暂时去掉，可以让最后的页脚自动调节*/
+	float: left;
+}
+
+.info_left td {
+	line-height: 27px;
+}
+.info_left table{
+	padding: 2px;
+}
+.personal_left table td {
+	line-height: 20px;
+	padding: 4px;
+}
+.album_left td{
+	line-height: 20px;
+}
+.album_left table{
+	padding: 5px;
+}

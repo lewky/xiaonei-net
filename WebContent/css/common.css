@@ -1,0 +1,86 @@
+body {
+	font-size: 12px;
+ 	onselectstart="return false";
+ 	-moz-user-select:none;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*定义常用的字体样式*/
+.font1 {
+	color: #3B5888;
+}
+
+.font2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+/*浅灰,12px;*/
+.font3 {
+	color: #808080;
+	line-height: 20px;
+}
+/*灰色，12px 粗体*/
+.font4 {
+	color: #808080;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.font5 {
+	font-weight: bold;
+}
+/*18px 华文细黑*/
+.font6 {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "华文新魏";
+}
+
+/*定义一下常用的超链接样式*/
+/*对连接的一般处理方法*/
+a.anavi:link,a.anavi:visited,a.anavi:hover,a.anavi:active {
+	color: #C3CDDF;
+	text-decoration: none;
+}
+/*通用的lini*/
+a:link,a:visited,a:active {
+	color: #3B5888;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3B5888;
+	text-decoration: underline;
+}
+
+/*定义几款按钮样式*/
+.sub {
+	background-color: #3B5888;
+	color: white;
+	padding: 2px 0 0 0;
+}
+/*有一款按钮*/
+.button1 {
+	background-color: #ffffff;
+	cursor: hand;
+	width: 161px;
+	height: 41px;
+	background-image: url(../images/front/regbtn.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	border: none;
+}
+/*提示文字底板*/
+.spanVal {
+	background-color: #FFFFCD;
+	font-size: 12px;
+	padding: 3px;
+	width: 220px;
+	height: 14px;
+	border: 3px #E7C437 solid;
+}

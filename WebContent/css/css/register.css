@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+/*登录界面的中间部分*/
+.reg_main{
+	width: 1000px;
+	margin: 3px auto 0  auto;
+	height: 570px;
+	/*background-color: pink;	*/
+}
+/*注册页面的中左部分*/
+.reg_introduce
+{
+	width: 270px;
+	height: 570px;
+	/*background-color: blue;*/
+	float: left;
+}
+.reg_form
+{
+	width: 730px;
+	float: left;
+}
+/*注册填入信息的表格*/
+.reg_tab
+{
+	width: 100%;
+/*	border-collapse: collapse;*/
+}
+.reg_tab td
+{
+	/*border: 1px solid gray;*/
+}
+
+.td_1
+{
+	color: #808080;
+	font-weight: bold;
+	text-align: right;
+	line-height: 30px;
+	width: 20%;
+}
+.td_2
+{
+	width: 40%;
+}
+.td_3
+{
+	width: 40%;
+}

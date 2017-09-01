@@ -1,0 +1,71 @@
+/*注册主体框框*/
+.reg_main_frame{
+width: 1000px;
+height: 650px;
+
+margin: 0 auto;
+margin-top: 3px;
+}
+
+/*加入后可以选择*/
+.play_item{
+width: 270px;
+/*height: 700px;*/
+float: left;
+
+}
+.play_item img{
+float: right;
+}
+/*注册用的表格div*/
+.reg_table1{
+width: 727px;
+margin-left: 3px;
+
+/*height: 700px;*/
+float: left;
+}
+
+.reg_table1 table{
+width: 700px;
+line-height: 30px;
+} 
+
+/*对注册表格外观进行修饰*/
+.tab_td1{
+width: 110px;
+text-align: right;
+font-size: 12px;
+font-weight: bold;
+color: #808080;
+padding-right: 10px;/*右填充*/
+}
+.tab_td2{
+width: 250px;
+}
+
+/*控制显示和不显示*/
+.gra_spe{
+display: none;
+}
+.worker_sep{
+
+}
+/*学校选择控件*/
+.divSch {
+	background-color: white;
+	border-style: solid;
+	position: absolute;
+	top: 430;
+	left: 400;
+	border-color: #D8DFEA;
+	border-width: 12px;
+}
+
+/*大学表格样式*/
+.uniTableDiv{
+	float:left;
+	display: list-item;
+	list-style-position: inside;
+	width: 33%
+}

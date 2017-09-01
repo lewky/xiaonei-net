@@ -1,0 +1,12 @@
+.foot {
+	width: 1000px;
+	margin: 0 auto;
+	height: 80px;
+	padding-top: 10px;
+	border-top: 1px solid gray;
+}
+
+#nav_rear span{
+	display: block;
+	float:left;
+}

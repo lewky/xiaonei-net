@@ -1,0 +1,72 @@
+.main {
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+/*中间的左边用户注册+登录*/
+.reg_login {
+	width: 200px;
+	height: 600px;
+	/*background-color: green;*/
+	float: left;
+}
+
+.banner1 {
+	width: 795px;
+	float: left;
+	margin-left: 5px;
+	text-align: center;
+}
+
+/*校内网的介绍*/
+.intro {
+	margin-left: 5px;
+	float: left;
+	width: 642px;
+}
+
+/*控制行高*/
+.intro li {
+	line-height: 20px;
+}
+
+/*注册的第二个入口*/
+.reg2 {
+	width: 150px;
+	text-align: center;
+	margin-top: 20px;
+	float: left;
+	height: 110px;
+}
+/*搜索好友*/
+.sea_friend {
+	width: 795px;
+	margin-left: 5px;
+	float: left;
+	border-bottom: 1px solid #808080;
+	padding-bottom: 2px;
+}
+/*建议*/
+.advice {
+	width: 795px;
+	margin-left: 5px;
+	float: left;
+	line-height: 20px;
+}
+/*登录表单*/
+.logForm {
+	margin-left: 20px;
+	margin-top: 20px;
+	line-height: 25px;
+	border-bottom: 1px solid #808080;
+	padding-bottom: 10px;
+}
+/*注册1*/
+.reg,.mobile_login {
+	margin-left: 20px;
+	margin-top: 10px;
+	line-height: 17px;
+	border-bottom: 1px solid #808080;
+	padding-bottom: 10px;
+}

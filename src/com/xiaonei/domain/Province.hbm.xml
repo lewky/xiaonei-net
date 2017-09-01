@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-8-23 21:07:12 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.xiaonei.domain.Province" table="province" catalog="xiaoneinet">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="country" class="com.xiaonei.domain.Country" fetch="select">
+            <column name="countryId" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="32" not-null="true" />
+        </property>
+        <set name="universities" table="university" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="proId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.University" />
+        </set>
+        <set name="userses" table="users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="homePro" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Users" />
+        </set>
+        <set name="cities" table="city" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="proId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.City" />
+        </set>
+    </class>
+</hibernate-mapping>

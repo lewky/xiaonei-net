@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-8-23 21:07:12 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.xiaonei.domain.City" table="city" catalog="xiaoneinet">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="province" class="com.xiaonei.domain.Province" fetch="select">
+            <column name="proId" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="32" not-null="true" />
+        </property>
+        <set name="towns" table="town" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cityId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Town" />
+        </set>
+        <set name="seniors" table="senior" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cityId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Senior" />
+        </set>
+        <set name="primaryschools" table="primaryschool" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cityId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Primaryschool" />
+        </set>
+        <set name="techschools" table="techschool" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cityId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Techschool" />
+        </set>
+        <set name="userses" table="users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="homeCity" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Users" />
+        </set>
+        <set name="juniors" table="junior" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cityId" />
+            </key>
+            <one-to-many class="com.xiaonei.domain.Junior" />
+        </set>
+    </class>
+</hibernate-mapping>

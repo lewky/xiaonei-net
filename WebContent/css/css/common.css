@@ -1,0 +1,270 @@
+@CHARSET "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	border: 0px;
+}
+body{
+	font-size: 12px;
+}
+
+/*文本区*/
+.wbq{
+	font-size:12px;
+	width:400px; 
+	height:70px; 
+	border:#BDC7D8 solid 1px;	
+}
+
+/*文本域*/
+.wby {
+	
+}
+.head
+{
+	width: 1000px;
+	height:101px;
+	margin: 0 auto;
+	background-color:   #3B5888;
+}
+
+.navi
+{	
+	float: right;
+}
+.navi li
+{	float: left;
+	color:#C3CDDF;
+	font-size: 12px;
+	height: 33px;
+	width: 55px;
+	list-style-type:none;
+	line-height: 33px;
+	text-align: center;
+}
+
+.home_navi{
+	
+}
+.home_navi li
+{
+	float: left;
+	color:#C3CDDF;font-size: 12px;
+	height: 33px;
+	width: 60px;
+	list-style-type:none;
+	line-height: 33px;
+	text-align: center;
+}
+
+.comm_foot
+{
+	margin: 10px  auto 0 auto;
+	
+	width: 1000px;
+	height: 70px;
+	border-top: 1px solid #D8DFEA;
+	padding-top: 5px;
+	
+}
+
+/*对连接的一般处理方法*/
+a.anavi:link,a.anavi:visited,a.anavi:hover,a.anavi:active {
+	color:#C3CDDF;
+	text-decoration: none;
+}
+/*通用的lini*/
+
+a:link,a:visited,a:active {
+	color:#3B5888;
+	text-decoration: none;
+}
+a:hover{
+	color: #3B5888;
+	text-decoration: underline;
+}
+/*常用字体*/
+.word1 {
+	font-size: 12px;
+	color: #3B5888;
+}
+
+/*一般链接*/
+a.xh:link {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: none;
+}
+
+a.xh:visited {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: none;
+}
+
+a.xh:hover {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: underline;
+}
+
+a.xh:active {
+	font-size: 12px;
+	color: #3B5888;
+	text-decoration: none;
+}
+
+/*top链接*/
+a.top:link {
+	font-size:14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a.top:visited {
+	font-size:14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a.top:hover {
+	font-size:14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a.top:active {
+	font-size:14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/*应用连接样式*/
+a.yy:link {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.yy:visited {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.yy:hover {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a.yy:active {
+	font-size: 16px;
+	color: #3B5888;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.word2 {
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+
+.word3 {
+	font-size: 12px;
+	color: #808080;
+	font-weight: bold;
+}
+
+.word4 {
+	font-size: 12px;
+	color: #808080;
+}
+
+.STYLE3 {font-size: 12px; font-weight: bold; }
+
+/*提交按钮  */
+.sub{
+	background-color: #3B5888;
+	color: white;
+	padding: 2px 0 0 0 ;
+}
+
+/*有一款按钮*/
+.button1{
+    background-color:   #ffffff;
+   	cursor:hand;
+	width:   161px;
+	height:   41px;
+   	background-image:   url(/images/front/regbtn.gif);
+   	background-repeat:   no-repeat;
+   	background-position:   center;
+   	text-align:   center;
+   	border:  none;
+   /*
+   
+    font-size:12px;
+    background-attachment:   scroll;
+
+ 
+   */
+}   
+/*一款button*/
+.button2{
+background-color: white; width: 60px; padding: 2px 0 0;
+}
+
+/*提示文字底板*/
+.spanVal {
+	background-color: #FFFFCD;
+	font-size: 12px;
+	padding: 3px;
+	width:220px;
+	height:14px;
+	border: 3px #E7C437 solid;
+}
+
+/*学校选择控件*/
+.divSch {
+	background-color: white;
+	border-style: solid;
+	position: absolute;
+	top: 430;
+	left: 400;
+	border-color: #D8DFEA;
+	border-width: 12px;
+}
+
+.foot_navi{
+	float: right;
+}
+.foot_navi li
+{
+	float: left;
+	margin-left: 10px;
+	list-style-type: none;
+
+}
+
+/*边框*/
+.divTbl{
+	border:#E5E5E5 solid 5px;
+}
+
+.tblDiv{
+	border: #AAAAAA solid 1px;
+}
+.tblFri{
+	border: #D8DFEA solid 1px;
+}
+.tblInfo{
+	border-right: 1px #898989 solid;
+	border-top: 1px #898989 solid;	
+}

@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+/*中间大的div*/
+.home_main{
+width: 1000px;
+height: 1000px;
+/*background-color: pink;*/
+margin: 3px auto 0 auto;
+}
+/*应用分类*/
+.types{
+	width: 158px;
+	height: 1000px;
+	/*background-color: aqua;*/
+	float: left;
+}
+
+/*应用内容放一个表格div*/
+.types_tab{
+	width: 135px;
+	margin: 15px auto 0 auto;
+}
+.types_tab table{
+	width: 100%;
+	text-align: center;
+}
+.types_tab td{
+	line-height: 30px;
+}
+
+/*广告*/
+.home_ad{
+width: 130px;
+height: 740px;
+margin: 5px  auto 0 auto;
+}
+	
+	
+/*主页内容*/
+.content{
+	width: 610px;
+	height: 1000px;
+	background-color: white;
+	float: left;
+}
+
+/*简单的个人信息*/
+.profile{
+	width: 584px;
+	margin: 15px auto 0 auto;
+}
+/*简单个人信息表格*/
+.profile table{
+	width: 90%;
+	/*border-collapse: collapse;*/
+	margin: 0 auto;
+}
+.profile table td{
+	/*border: 1px solid gray;*/
+	line-height: 30px;
+}
+
+/*留言及回复*/
+.mes_response{
+	width: 584px;
+	margin: 15px auto 0 auto;
+}
+/*留言和回复表格*/
+.mes_response table{
+	width: 90%;
+	/*border-collapse: collapse;*/
+	margin: 0 auto;
+}
+.mes_response table td{
+	/*border: 1px solid gray;*/
+	line-height: 20px;
+}
+/*新鲜事情*/
+.new_thing{
+	width: 584px;
+	margin: 15px auto 0 auto;
+}
+
+/*新鲜事情的表格*/
+.new_thing table{
+	width: 90%;
+	/*border-collapse: collapse;*/
+	margin: 0 auto;
+}
+.new_thing table td{
+	/*border: 1px solid gray;*/
+	line-height: 30px;
+}
+
+/*人气之星 和 新人*/
+
+.popular,.freshman{
+	width: 584px;
+	margin: 12px auto 0 auto;
+}
+.popular table,.freshman table{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.popular table td,.freshman table td{
+	line-height:18px;
+	width: 11%;
+	vertical-align: top;
+}
+
+/*联系人*/
+.linkman{
+	width: 232px;
+	height: 1000px;
+	float: left;
+}
+
+/*最近来访的人，最多选取六个*/
+.linkman_last,.may_know,.birth_linkman,.linkman_online{
+	width: 190px;
+	margin: 15px  auto 0 auto;
+}
+/*最近来访人的表格*/
+.linkman_last table,.may_know table,.birth_linkman table,.linkman_online table{
+	width: 100%;
+	margin: 0 auto;	
+}
+.linkman_last table td,.may_know table td,.birth_linkman table td,.linkman_online table td{
+ width: 33%;
+ vertical-align: top;
+}

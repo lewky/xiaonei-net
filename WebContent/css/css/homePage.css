@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+.homePage{
+	width: 1000px;
+	height: 1150px;
+	margin: 10px auto 0 auto;
+}
+.homePage_intro{
+	width: 214px;
+	float: left;
+	height: 1150px;
+}
+
+/*简单信息的表格 */
+.homePage_intro table
+{
+	width: 95%;
+	margin: 0 auto;
+}
+.homePage_intro table td
+{
+	line-height: 27px;
+}
+/*各种各样的信息*/
+.allkinds{
+	width: 214px;
+	float: left;
+	text-align: center;
+}
+/*当前信息*/
+.profile{
+	width: 598px;
+	height: 1150px;
+	float: left;
+}
+.curInfo{
+	width: 589px;
+	line-height: 30px;
+	
+}
+/*可选操作*/
+.opers{
+	width: 560px;
+	margin: 10px  auto 0 auto;
+}
+
+/*我的相册div*/
+.album{
+	width: 560px;
+	margin: 20px  auto 0 auto;
+}
+.album table{
+	width: 100%;
+	text-align: center;
+}
+.album table td{
+	width: 25%;
+	line-height: 20px;
+}
+/*我的日志div*/
+.log{
+	width: 560px;
+	margin: 20px  auto 0 auto;
+}
+.log table{
+	width: 100%;
+}
+.log table td{
+	line-height: 25px;
+}
+/*我的留言板*/
+.guessbook{
+	width: 560px;
+	margin: 20px  auto 0 auto;
+}
+.guessbook table{
+	width: 100%;
+}
+.guessbook table td{
+	line-height: 25px;
+}
+/*留言内容*/
+.mess_con{
+	width: 560px;
+	margin: 20px auto 0 auto;
+	border-bottom: 1px solid gray;
+}
+.mess_con table{
+	width: 100%;
+}
+.mess_con table td{
+	line-height: 25px;
+}
+
+/*个人信息*/
+.person_info{
+	width: 560px;
+	margin: 10px  auto 0 auto;
+}
+
+.person_info table{
+border-bottom: 1px solid gray;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+.person_info table td{
+line-height: 20px;
+}
+
+/*最近联系的朋友*/
+.friend_last{
+	width: 188px;
+	height: 1150px;
+	float: left;
+}
+/*特别好友!*/
+.special_friend,.last_visit,.good_friend{
+	width: 188px;
+	margin-top: 10px;
+}
+.special_friend table{
+	width: 100%;
+}
+.special_friend td,.last_visit td,good_friend td{
+	line-height: 18px;
+}
+
+.last_visit table,.good_friend table{
+	width: 100%;
+	text-align: center;
+}
+
+

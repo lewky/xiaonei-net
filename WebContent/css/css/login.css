@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+/*登录界面的中间部分*/
+.main{
+	width: 1000px;
+	margin: 3px auto 0  auto;
+	height: 520px;	
+}
+
+
+/*登录+注册*/
+.login_reg{
+  width: 200px;
+  height: 520px;
+  float: left;
+  
+}
+
+/*登录*/
+.login,.reg1,.mobile_login{
+	width: 170px;
+	/*height: 30px;*/
+	/*background-color: teal;*/
+	margin: 20px auto 0 auto;
+	padding-bottom: 10px;
+	border-bottom: 1px solid gray;
+}
+/*注册*/
+.reg1{
+	/*width: 170px; margin: 20px auto 0 auto; p*/
+}
+/*手机登录*/
+.mobile_login{
+}
+
+/*各种介绍*/
+.logo{
+	width: 800px;
+	height: 310px;
+	float: left;
+	text-align: center;
+	/*background-color: red;*/
+}
+/*介绍*/
+.introduce
+{
+	width: 650px;
+	height: 100px;
+/*	background-color: lime;*/
+	float: left;
+	
+}
+/*第二个注册的地方*/
+.reg2
+{
+	width: 150px;
+	height: 100px;
+/*	background-color: fuchsia;*/
+	float: left;
+}
+/*找朋友*/
+.find_friend
+{
+	width: 800px;
+	height: 40px;
+	/*background-color: navy;*/
+	float: left;
+	margin: 4px 0 0 0;
+	padding-bottom: 3px;
+	border-bottom: 1px solid gray;
+}
+/*建议*/
+.advice
+	{
+	width: 650px;
+	height: 60px;
+	
+	float: left;
+	margin: 8px 0 0 0;
+	}
+/*你提建议*/
+.give_advice
+{
+	width: 150px;
+	height: 60px;
+	/*background-color: silver;*/
+	margin: 8px 0 0 0;
+	
+	float: left;
+}
+a:login:link
+{
+	
+}

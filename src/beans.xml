@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- <bean id="testService" class="com.xiaonei.test.TestService"> <property 
+		name="name" value="Easin"></property> </bean> -->
+	<context:annotation-config />
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/xiaoneinet?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123" />
+		<!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="30" />
+		<!-- 连接池的最大值 -->
+		<property name="maxActive" value="500" />
+		<!-- 最大空闲值，当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接释放一部分，一直减少到maxIdle为止 -->
+		<property name="maxIdle" value="2" />
+		<!-- 最小空闲值，当空闲的连接数少于阀值时，连接池就会预申请一些连接，以免洪峰来时来不及申请 -->
+		<property name="minIdle" value="1" />
+	</bean>
+	<!-- 配置SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 设置数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 接管了hibernate对象映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/xiaonei/domain/City.hbm.xml</value>
+				<value>com/xiaonei/domain/Country.hbm.xml</value>
+				<value>com/xiaonei/domain/Junior.hbm.xml</value>
+				<value>com/xiaonei/domain/Primaryschool.hbm.xml</value>
+				<value>com/xiaonei/domain/Province.hbm.xml</value>
+				<value>com/xiaonei/domain/Senior.hbm.xml</value>
+				<value>com/xiaonei/domain/Techschool.hbm.xml</value>
+				<value>com/xiaonei/domain/Town.hbm.xml</value>
+				<value>com/xiaonei/domain/University.hbm.xml</value>
+				<value>com/xiaonei/domain/Usernet.hbm.xml</value>
+				<value>com/xiaonei/domain/Users.hbm.xml</value>
+				<value>com/xiaonei/domain/Usersenior.hbm.xml</value>
+				<value>com/xiaonei/domain/Useruniversity.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.hbm2ddl.auto=update
+				hibernate.show_sql=false
+				<!-- 启用二级缓存 -->
+				hibernate.cache.use_second_level_cache=true
+				<!-- 指定使用哪种二级缓存 -->
+				hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
+				<!-- 启用对二级缓存的统计策略 -->
+				hibernate.generate_statistics=true
+			</value>
+		</property>
+	</bean>
+	<!-- 配置事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 启用事务注解 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+	
+	<!-- 配置service对象 -->
+	<bean id="countryServiceImpl" class="com.xiaonei.service.impl.CountryServiceImpl"/>
+	<bean id="provinceServiceImpl" class="com.xiaonei.service.impl.ProvinceServiceImpl"/>
+	<bean id="universityServiceImpl" class="com.xiaonei.service.impl.UniversityServiceImpl"/>
+	<bean id="userServiceImpl" class="com.xiaonei.service.impl.UserServiceImpl"/>
+	<bean id="userServiceUniversityImpl" class="com.xiaonei.service.impl.UseruniversityServiceImpl"/>
+	
+	<!-- 配置action -->
+	<bean name="/login" scope="prototype" class="com.xiaonei.web.action.LoginAction">
+		<property name="userService" ref="userServiceImpl"></property>
+	</bean>
+	<bean name="/register" scope="prototype" class="com.xiaonei.web.action.RegisterAction">
+		<property name="countryService" ref="countryServiceImpl"></property>
+		<property name="provinceService" ref="provinceServiceImpl"></property>
+		<property name="universityService" ref="universityServiceImpl"></property>
+		<property name="userService" ref="userServiceImpl"></property>
+		<property name="useruniversityService" ref="userServiceUniversityImpl"></property>
+	</bean>
+	<bean name="/profile" scope="prototype" class="com.xiaonei.web.action.ProfileAction">
+		<property name="userService" ref="userServiceImpl"></property>
+	</bean>
+	<bean name="/album" scope="prototype" class="com.xiaonei.web.action.AlbumAction"></bean>
+</beans>
